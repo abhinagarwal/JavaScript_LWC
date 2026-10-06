@@ -1,0 +1,128 @@
+//String operations
+let str = "Apple , Banana , Kiwi, Banana , Banana";
+undefined
+
+str.replace('banana','BANANA')
+Apple , Banana , Kiwi, Banana , Banana
+
+str.replace('Banana','BANANA')
+Apple , BANANA , Kiwi, Banana , Banana
+
+str.replace(/Banana/g,BANANA)
+{ BANANA is not defined }
+
+str.replace(/Banana/g,'BANANA')
+Apple , BANANA , Kiwi, BANANA , BANANA
+
+str.replaceAll('BANANA','Banana')
+Apple , Banana , Kiwi, Banana , Banana"
+
+str.toUpperCase();
+APPLE , BANANA , KIWI, BANANA , BANANA"
+
+str.toLowerCase();
+apple , banana , kiwi, banana , banana"
+
+//trim
+let newStr = '   jdfssdf   ksdfdsf    ';
+undefined
+newStr.trim()
+"jdfssdf   ksdfdsf"
+
+//padding
+let num = '5'
+undefined
+num.padStart(5,'*')
+****5
+num.padEnd(5,':')
+5::::
+
+//padding
+let cc = '987656789987655577';
+undefined
+let last4 = cc.slice(-4)
+undefined
+last4
+5577
+last4.padStart(cc.length,'*')
+**************5577
+last4.padStart(cc.length,'X-')
+X-X-X-X-X-X-X-5577
+
+
+
+let str1 = "Apple, Banana, Banana, Banana, Kiwi"
+undefined
+str.indexOf('Banana')
+8
+str,indexOf('Guavava')
+{ indexOf is not defined }
+str.indexOf('Guavava')
+-1
+str.lastIndexOf('Banana')
+32
+
+let str1 = "Apple, Banana, Banana, Banana, Kiwi"
+undefined
+str.indexOf('Banana')
+8
+str,indexOf('Guavava')
+{ indexOf is not defined }
+str.indexOf('Guavava')
+-1
+str.lastIndexOf('Banana')
+32
+str1.startsWith("Apple")
+true
+str1.endsWith("Banana")
+false
+
+//string replace a variable
+let num = 23;
+{ Identifier 'num' has already been declared }
+
+let num1 =  23
+undefined
+let str1 = `This is just a simple ${num1}`
+{ Identifier 'str1' has already been declared }
+
+let st23 = `This is just a simple ${num1}`
+undefined
+
+st23
+This is just a simple 23
+
+//object
+let obj = {}
+undefined
+obj
+{
+}
+obj.name =  'aa'
+aa
+obj.age = 44
+44
+obj
+{ age:44,name:aa }
+
+bj["Department Name"] = 'Admin'
+Admin
+obj
+{ Department Name:Admin,age:44,name:aa }
+
+obj.Name
+undefined
+
+obj.name
+aa
+
+obj.age
+44
+
+obj.Department Name
+{ Unexpected token, expected ; (1:29) }
+
+obj["Department Name"]
+Admin
+
+
