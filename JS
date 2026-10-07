@@ -125,4 +125,35 @@ obj.Department Name
 obj["Department Name"]
 Admin
 
+-----------------------------
+
+let user = {isAdmin = true}
+{ Unexpected token (1:34) }
+
+let user = {isAdmin : true}
+undefined
+
+user
+{ isAdmin:true }
+
+user.Title = "Admin"
+Admin
+
+user
+{ Title:Admin,isAdmin:true }
+
+//copying shares reference to same values
+let admin = user
+undefined
+
+admin
+{ Title:Admin,isAdmin:true }
+
+admin.email = 'mail@mail.com'
+mail@mail.com
+
+user
+{ Title:Admin,email:mail@mail.com,isAdmin:true }
+
+
 
