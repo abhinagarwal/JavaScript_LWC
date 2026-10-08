@@ -156,4 +156,63 @@ user
 { Title:Admin,email:mail@mail.com,isAdmin:true }
 
 
+//copying 1 object to other
+
+let userAdmin = {
+    name : '',
+    email : '',
+    adminInfo : {
+        isAdmin : false,
+        access : [
+            "IP",
+            "Email"
+            ]
+    }
+
+}
+undefined
+let adminNew = {...userAdmin}
+undefined
+adminNew
+{name: '', email: '', adminInfo: {…}}adminInfo: {isAdmin: false, access: Array(2)}email: ""name: "My Admin"[[Prototype]]: Object
+adminNew.name = "My Admin"
+'My Admin'
+adminNew
+{name: 'My Admin', email: '', adminInfo: {…}}adminInfo: {isAdmin: false, access: Array(2)}email: ""name: "My Admin"[[Prototype]]: Object
+userAdmin
+{name: '', email: '', adminInfo: {…}}adminInfo: {isAdmin: false, access: Array(2)}email: ""name: ""[[Prototype]]: Object
+
+let adminnew = Object.assign({},userAdmin)
+undefined
+adminnew
+{name: '', email: '', adminInfo: {…}}adminInfo: {isAdmin: false, access: Array(2)}email: ""name: ""[[Prototype]]: Object
+adminNew
+{name: 'My Admin', email: '', adminInfo: {…}}adminInfo: {isAdmin: false, access: Array(2)}email: ""name: "My Admin"[[Prototype]]: Object
+
+let adminA = JSON.parse(JSON.stringify( userAdmin) );
+undefined
+adminA
+
+Object.seal() - cant delete but can change
+Object.freeze()
+
+/////
+
+switch(day){
+    case 1:
+        alert('Monday');
+        break;
+    case 2:
+        alert('Tuesdat');
+        break;
+    case 3:
+        alert('Wed');
+        break;
+    case 4:
+        alert('Thrusday')
+        break;
+    default:
+        'Sunday';
+        break;
+}  
 
