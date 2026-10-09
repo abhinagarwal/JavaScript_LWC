@@ -216,3 +216,45 @@ switch(day){
         break;
 }  
 
+//////////////////////////////////////////////////////
+for loop : for , for in , for of
+let userAdmin = {
+            name  :'Amit',
+            email : 'someemail@gmail.com',
+}
+undefined
+for(let x in userAdmin){
+}
+undefined
+for(let x in userAdmin){
+}
+undefined
+for (let x in userAdmin) {
+    alert(userAdmin[x] );
+}
+undefined
+userAdmin[x]
+VM510:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:11
+(anonymous) @ VM510:1
+for(var x in userAdmin){
+    alert(userAdmin[x])
+}
+undefined
+userAdmin[x]
+'someemail@gmail.com'
+let myMap =  new Map();
+undefined
+myMap.set('FirstName', 'Champion');
+Map(1) {'FirstName' => 'Champion'}
+myMap.set('LastName','Singh');
+Map(2) {'FirstName' => 'Champion', 'LastName' => 'Singh'}
+myMap.set('Email','aa@nnn.com');
+Map(3) {'FirstName' => 'Champion', 'LastName' => 'Singh', 'Email' => 'aa@nnn.com'}
+for(let x of myMap){
+    alert(x);
+}
+undefined
+for(let x of myMap.values()){
+    alert(x);
+}
