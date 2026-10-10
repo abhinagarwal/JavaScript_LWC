@@ -258,3 +258,65 @@ undefined
 for(let x of myMap.values()){
     alert(x);
 }
+//////////////////////////////////////////////////
+fruits = ['Apple' , 'Banana' , 'Grapes']
+(3) ['Apple', 'Banana', 'Grapes']
+let users = ['Amit','John','Demallio']
+undefined
+users
+(3) ['Amit', 'John', 'Demallio']
+let concatArray = fruits.concat(users,['23',234, 334])
+undefined
+concatArray
+(9) ['Apple', 'Banana', 'Grapes', 'Amit', 'John', 'Demallio', '23', 234, 334]
+concatArray.en
+undefined
+concatArray.entries() , return iterator
+
+let users = [12,23,223,244,235,32];
+undefined
+users.some(function(currentVal,index,orignalArray) {
+    alert(index)
+})
+false
+users.some(function(currentVal,index,orignalArray) {
+    alert(index)
+})
+false
+users.some(function(currentVal,index,orignalArray) {
+    alert(index)
+})
+false
+users.some(function(currentVal,index,orignalArray){}
+VM771:1 Uncaught SyntaxError: missing ) after argument list (at VM771:1:52)
+users.some(function(currentVal,index,orignalArray){ 
+    alert(index)
+    console.log( orignalArray)
+    return currentVal > 10})
+VM1100:3 (6) [12, 23, 223, 244, 235, 32]
+true
+var mySet = new Set();
+undefined
+mySet.add(23);
+Set(1) {23}
+mySet.add(223);
+Set(2) {23, 223}
+mySet.add(2);
+Set(3) {23, 223, 2}
+mySet
+Set(3) {23, 223, 2}
+let arr = Array.from(mySet)
+undefined
+arr
+(3) [23, 223, 2]
+Array.from('I am best in salesforce')
+
+if(Array.isArray(arr)){}
+undefined
+if(Array.isArray(arr)){arr.forEach( function(currentValue,index, orignalArray) {
+    console.log('before',currentValue)
+})}
+VM1917:2 before 23
+VM1917:2 before 223
+VM1917:2 before 2
+
