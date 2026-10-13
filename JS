@@ -430,3 +430,16 @@ age
 1	'Abc'	'22'
 2	'Abc'	'22'
 
+console.group()
+UserList.forEach( function(item){
+    console.group(item.name);
+    console.log(item.age);
+    console.groupEnd(item.firstName);
+})
+VM2373:2 Abc
+VM2373:3   22
+VM2373:2 Abc
+VM2373:3   22
+VM2373:2 Abc
+VM2373:3   22
+
