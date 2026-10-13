@@ -404,3 +404,29 @@ user.b()
 VM1431:8 Singh {firstName: 'Amit', lastName: 'Singh', sayHello: ƒ, a: ƒ, b: ƒ}a: ()=>{ console.log(this.firstName,this)}b: ƒ ()length: 0name: "b"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM1431:8[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]firstName: "Amit"lastName: "Singh"sayHello: ƒ ()[[Prototype]]: Object
 
 
+**************************************************************************************************
+Console Methods in Java Script
+
+console
+console.log
+console.debug
+console.error
+
+console.Table(userList);
+UserList = [
+    {name:'Abc',age:"22"},{name:'Abc',age:"22"},{name:'Abc',age:"22"}]
+(3) [{…}, {…}, {…}]
+console.log('UserList',UserList)
+VM1772:1 UserList 
+(3) [{…}, {…}, {…}]
+undefined
+
+console.table(UserList)
+VM1974:1 
+(index)
+name
+age
+0	'Abc'	'22'
+1	'Abc'	'22'
+2	'Abc'	'22'
+
