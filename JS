@@ -442,4 +442,85 @@ VM2373:2 Abc
 VM2373:3   22
 VM2373:2 Abc
 VM2373:3   22
+*******************************************************************************
+SetTimeout and Set Interval methods in console
+console.time
 
+console.timeLog
+console.timeEnd
+
+***************************************************************************
+Promise in JS
+
+var promise = new Promise(
+    function(resolve,reject) {
+        resolve('Foo'); either resolve will go with then
+        reject('Whoops'); or reject will go with catch
+        finally will be eecuted every time
+    }
+);
+promise.then( (result) => {
+    alert(result);
+})
+.catch((error) => {
+    alert(error)
+})
+.finally( ()=> {
+    alert("Finally Executed")
+})
+
+    Promise.all  --- waits for all the promises to be completed
+var promise = new Promise(function(resolve,reject){
+  setTimeout( ()=> { resolve("Car 1 has completed the race")},3000)  
+})
+var promise1 = new Promise(function(resolveFun,reject){
+  setTimeout(()=>{resolveFun("Car2 has completed the race")},1000)  
+})
+Promise.all([promise,promise1]).then((message)=>{console.log('message',message)})
+.catch((errors)=>{console.log('message',message)
+    
+})
+.finally( ()=>{console.log('finally')})
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+VM2602:7 message (2) ['Car 1 has completed the race', 'Car2 has completed the race']0: "Car 1 has completed the race"1: "Car2 has completed the race"length: 2[[Prototype]]: Array(0)
+VM2602:11 finally
+
+      Promise.any ---checks for any promise gets completed
+
+var promise = new Promise(function(resolve,reject){
+  setTimeout( ()=> { resolve("Car 1 has completed the race")},3000)  
+})
+var promise1 = new Promise(function(resolveFun,reject){
+  setTimeout(()=>{resolveFun("Car2 has completed the race")},1000)  
+})
+Promise.any([promise,promise1]).then((message)=>{console.log('message',message)})
+.catch((errors)=>{console.log('message',message)
+    
+})
+.finally( ()=>{console.log('finally')})
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+VM2636:7 message Car2 has completed the race
+VM2636:11 finally
+       
+Promise.race
+
+       Promise.reject
+
+let error = Promise.reject(new Error('Testing Promise error'))
+error.catch((error)=>{
+    alert('error')
+})
+Promise {<fulfilled>: undefined}
+let error = Promise.reject(new Error('Testing Promise error'))
+error.catch((error)=>{
+    alert(error)
+})
+Promise {<fulfilled>: undefined}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+
+      Promise.resolve
+
+let resolve = Promise.resolve('This is resolved')
+resolve.then( (message) => {alert(message)})
+Promise {<fulfilled>: undefined}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+
+Promise can also be changed
