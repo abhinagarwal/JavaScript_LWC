@@ -523,4 +523,20 @@ let resolve = Promise.resolve('This is resolved')
 resolve.then( (message) => {alert(message)})
 Promise {<fulfilled>: undefined}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
 
-Promise can also be changed
+Promise can also be chained
+
+let cleanRoom = new Promise( function(resolve,reject){
+    setTimeout(resolve('I am a good footballer'),4000)
+})
+cleanRoom.then(
+    (message) =>{console.log(message);
+                let musicConcert = new Promise(function(resolve,reject){
+                    setTimeout( resolve('I am in music concert'),4000)
+                })
+                 musicConcert.then( (messageMusic)=>{
+                     console.log(messageMusic);
+                 })
+                })
+.catch( (error)=>{
+    console.log(message);
+})
